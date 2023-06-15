@@ -9,6 +9,4 @@ class Solution:
                 ai=x+y
                 x=y
                 y=ai
-            return ai
-            
-        
+            return ai        
