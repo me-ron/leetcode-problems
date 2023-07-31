@@ -5,6 +5,5 @@ class Solution:
             i = dic[s]
             nums[i] = e
             dic[e] = i
-            #del dic[s]
         return nums
         
