@@ -7,4 +7,10 @@ class Solution:
             for j in range (i+1,len(nums)):
                 if nums[i]>nums[j]:
                     nums[i],nums[j]=nums[j],nums[i]
+                    
+                
+            
+        
+            
+            
         
