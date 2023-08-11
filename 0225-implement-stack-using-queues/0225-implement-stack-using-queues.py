@@ -1,14 +1,17 @@
 class MyStack:
 
     def __init__(self):
-        self.queue = []
+        self.queue = deque()
 
     def push(self, x: int) -> None:
         self.queue.append(x)
 
     def pop(self) -> int:
         
-        return self.queue.pop()
+        for i in range(len(self.queue) - 1):
+            self.queue.append(self.queue.popleft())
+            
+        return self.queue.popleft()
     def top(self) -> int:
         
         return self.queue[-1]
