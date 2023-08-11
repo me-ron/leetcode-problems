@@ -2,12 +2,12 @@ class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
         dic=Counter(s)
         stack=[]
-        visited=set()
+        seen=set()
         for i in range(len(s)):
-            if s[i] not in visited:
+            if s[i] not in seen:
                 while stack and stack[-1] > s[i] and dic[stack[-1]] > 0:
-                    visited.remove(stack.pop())
+                    seen.remove(stack.pop())
                 stack.append(s[i])
-            visited.add(s[i])
+            seen.add(s[i])
             dic[s[i]]-=1
         return "".join(stack)
